@@ -133,45 +133,139 @@ nav {
 }
 
 /* Footer */
-footer {
-    background-color: #2d3748;
-    padding: 4rem 24px;
+.footer {
+    background-color: #004185;
+    padding: 4rem 2rem;
     margin-top: 4rem;
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
-.footer-container h3, .footer-container h4 {
+.footer h3,
+.footer h4 {
     color: #fbbf24;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 16px;
+    margin-bottom: 1.5rem;
 }
 
-.footer-container p {
-    color: #e2e8f0;
+.footer p,
+.footer a {
+    color: #d1d5db;
 }
 
-.footer-container a {
-    color: #e2e8f0;
+.footer ul {
+    list-style: none;
+    padding: 0;
     text-decoration: none;
 }
 
-.footer-container a:hover {
+.footer a:hover {
     color: #fbbf24;
 }
 
-.footer-bottom {
-    text-align: center;
-    margin-top: 32px;
+.footer .border-top {
     border-top: 1px solid #4a5568;
-    padding-top: 16px;
-    color: #e2e8f0;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+
+}
+
+.nav-style {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+    flex-direction: row-reverse;
+    background-color: transparent;
+
+    width: 100%;
+    color: #FFB200;
+    height: 60px;
+    top: 0;
+    padding: 10px 0;
+}
+
+@font-face {
+    font-family: 'BOONE Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('BOONE Regular'), url('BOONE.woff') format('woff');
+}
+
+.nav-links a {
+    font-family: "Amiri", serif;
+    font-weight: 500;
+    color: #FFB200;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px 10px;
+    font-size: 25px;
+    position: relative;
+    top: 15px;
+}
+
+.login-nav {
+    font-family: "Amiri", serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 10px;
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+}
+
+.login-btn {
+    border-radius: 10px;
+    padding: 10px 10px;
+    position: relative;
+    bottom: 10px;
+    text-decoration: none;
+    background-color: #FFB200;
+    border: #211C84 1px solid;
+    color: #211C84;
+}
+
+.brand-name a {
+    font-size: 36px;
+    position: relative;
+    bottom: 20px;
+    color: #FFB200;
+    font-family: "Amiri", serif;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-icons i {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+    padding: 10px 10px;
+}
+
+
+.nav-style.scrolled {
+    background-color: #004185;
+    color: rgb(255, 255, 255);
+}
+
+.nav-style.scrolled a,
+.nav-style.scrolled i {
+    color: rgb(255, 255, 255);
+}
+
+.nav-links a:hover,
+.brand-name a:hover,
+.nav-icons i:hover {
+    color: rgb(255, 255, 255);
 }
 
 /* Animation */
